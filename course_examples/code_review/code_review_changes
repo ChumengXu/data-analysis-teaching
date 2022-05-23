@@ -1,0 +1,31 @@
+original file (code_review.R)
+
+* Removed rm(list); setwd and libraries which weren't used in the script 
+
+* Removed duplicate line sourcing a file
+
+* Added a comment explaining why we are sourcing a helper file and what it's doing
+    In practice, you might want to isolate the download/upload code in the setup and put it in a file that has a more 
+    descriptive name. Better yet, since the data is on someone's website and it might not be around forever you may want 
+    to actually download the data and store it in a location where you (and others) can access "forever" 
+    (Amazon S3, Dropbox, Google Drive, Internal Fileshare)
+
+* Got rid of the function comments, changed the function names, and added function documentation
+
+* Defined all the functions up front vs. having some embedded in the script
+
+* Made changes to code to use dplyr code vs. base R (more expressive of the action being performed)
+
+* Got rid of inconsistent namespace usage of dplyr::
+
+* Named objects in a more descriptive way (and made sure to refer to the correct objects so code actually worked)
+
+* Was careful not to overwrite original objects (no need to in this case)
+
+* Added purrr::map to map apply functions to a list of data frame objects (mostly to show off purrr)
+
+What are some other things we could have done?
+
+* Cleaned original data up front rather than at the end
+* Not used "." case naming convention (we were following the convention of the existing .Rdata file we sourced though)
+* Had a "clean data" script which wrote our cleaned file somewhere safe and then an analysis script to analyze that

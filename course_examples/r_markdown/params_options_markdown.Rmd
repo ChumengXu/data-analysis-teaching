@@ -1,0 +1,27 @@
+---
+title: "CheckMate214 Trial Analysis"
+author: "Carrie Bennette & Josh Kraut"
+date: "10/10/2018"
+output: html_document
+params:
+  trial_name:
+    label: "Trial Name"
+    value: "CheckMate214"
+    input: select
+    choices: ["CheckMate214", "METEOR", "POPLAR"]
+  disease_setting:
+    label: "Disease Setting"
+    value: "rcc"
+    input: select
+    choices: [rcc, nsclc]
+  data_source:
+    label: "RWE Data Source"
+    value: "2018_oct_edm"
+    input: select
+    choices: ["2018_oct_edm", "2018_aug_edm"]
+  cutoff_date:
+    label: "Data Cutoff Date"
+    value: "2018-10-01"
+    input: select
+    choices: ["2018-10-01", "2018-08-01"]
+---

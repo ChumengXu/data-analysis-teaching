@@ -1,0 +1,18 @@
+---
+title: "CheckMate214 Trial Analysis"
+author: "Carrie Bennette & Josh Kraut"
+date: "10/10/2018"
+output: html_document
+params:
+  trial_name: "CheckMate214"
+  disease_setting: "rcc"
+  data_source: "2018_oct_edm"
+  cutoff_date: "2018-10-01"
+---
+
+```{r params}
+print(params$trial_name)
+print(params$disease_setting)
+print(params$data_source)
+print(params$cutoff_date)
+```

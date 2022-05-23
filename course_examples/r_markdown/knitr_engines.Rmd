@@ -1,0 +1,33 @@
+---
+title: "knitR Engines"
+output: html_document
+---
+
+This is a toy example.  There are many better ways to share data between languages.  Rstudio also recently put out a 
+great package called `Reticulate` which makes it easier to weave together Python and R.
+
+## Sharing Data (start with R)
+```{r}
+head(mtcars)
+write.csv(mtcars, "./markdown_data/mtcars.csv", row.names = FALSE)
+```
+ 
+## Read to Python and Clean
+```{python, python.reticulate = FALSE}
+import pandas
+ 
+mtcars = pandas.read_csv("./markdown_data/mtcars.csv")
+mtcars_clean = mtcars[mtcars['cyl'] == 6]
+ 
+print(mtcars_clean.head(10))
+ 
+# Write to csv file for reading from R
+mtcars_clean.to_csv("./markdown_data/mtcars_python.csv")
+```
+ 
+## Read in R
+```{r}
+
+mtcars_python <- read.csv("./markdown_data/mtcars_python.csv", header = TRUE)
+          
+head(mtcars_python)

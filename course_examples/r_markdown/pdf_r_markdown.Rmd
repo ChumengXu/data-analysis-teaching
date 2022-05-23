@@ -1,0 +1,34 @@
+---
+title: "ISPOR Exercise"
+subtitle: "Tools for Reproducible Real-World Analyses"
+author: "Tom Riddle"
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 2
+---
+
+__Author:__ `r Sys.getenv("USER")`
+
+__Date generated:__ `r Sys.Date()`  
+
+# __Goal of the Exercise__
+This analysis needs a code review by attendees at the short course "Tools for Reproducible Real 
+World Analyses" at ISPOR Europe 2018.
+
+```{r setup}
+knitr::opts_chunk$set(cache = FALSE)
+```
+
+## Formatted Tables
+```{r cars2}
+knitr::kable(summary(cars))
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
