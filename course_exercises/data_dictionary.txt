@@ -1,0 +1,42 @@
+Data Dictionary
+by Blythe Adamson
+5/24/2022
+
+Here is a description of the variables in each table of the dummy electronic health records (EHR) dataset used for in-class exercises. 
+
+Medication orders
+
+patient_id: patient identifier for internal purposes
+external_patient_id: patient identifier for external (client) purposes
+order_id: unique identifier of each medication ordered by a health provider
+order_date: date in which medication was ordered by a health provider
+
+Medication administrations
+
+patient_id: patient identifier for internal purposes
+external_patient_id: patient identifier for external (client) purposes
+order_id: unique identifier of each medication ordered for a patient by a health provider
+administered_date: date in which ordered medication was administered
+drug_name: drug administered to patient
+
+Patient demographics
+
+patient_id: patient identifier for internal purposes gender: gender of patient
+age: age of patient at the time of diagnosis race: racial group classification of patient
+
+Patients
+
+patient_id: patient identifier for internal purposes
+external_patient_id: patient identifier for external purposes
+external_practice_id: practice identifier for external purposes
+internal_practice_id: practice (site at which patient receives oncology care) identifier for internal purposes
+diagnosis_date: date on which patient was initially diagnosed
+advanced_diagnosis_date: date on which patient was diagnosed as advanced
+
+Practices
+
+practice_id: client identifier for internal purposes
+external_practice_id: client identifier for external (client) purposes
+emr_system: software product used by the client (OncoE = OncoEMR; OncoA = OncoAnalytics; OncoB = OncoBilling)
+practice_type: classification of practice into either community or academic bucket
+active: status of client
