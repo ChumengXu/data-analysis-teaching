@@ -22,7 +22,8 @@ drug_name: drug administered to patient
 Patient demographics
 
 patient_id: patient identifier for internal purposes gender: gender of patient
-age: age of patient at the time of diagnosis race: racial group classification of patient
+age: age of patient at the time of administration of first line treatment
+race: racial group classification of patient
 
 Patients
 
